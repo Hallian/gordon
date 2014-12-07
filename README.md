@@ -1,6 +1,17 @@
 # gordon
 > _"Hell's Provisioning"_
 
+After finding the `knife` commands to be verbose to a degree of extreme
+annoyance and `knife` not managing the simple task of unpacking it's own
+groceries, I decided there was need for an actual Chef so I called Gordon Ramsay
+over! No more annoying fumbling with the knife as you try to remember whether it
+was `cookbook site download` or `site download cookbook` or whatever. No more
+combing through `metadata.rb`s and `metadata.json`s for dependencies. Need to
+create new repository? _"Where was that example repo again? I swear I had the
+url somehere in my emails..."_ Don't worry, Gordon has got you covered!
+
+<img src="https://i.imgflip.com/f0j7j.jpg" alt="">
+
 # Installing
 
 ## Prerequisites
@@ -66,6 +77,10 @@ no parameters, e.g.
 $ cd /var/chef
 $ gordon download
 ```
+
+# Found a bug?
+
+Please report any bugs you might encounter and pull requests are welcome.
 
 # Authors
 
