@@ -30,7 +30,7 @@ $ npm install -g coffee-script
 Follow these instructions to install `gordon`.
 
 ```bash
-$ curl https://raw.githubusercontent.com/Hallian/gordon/master/install.sh | bash
+$ curl nikolas.ninja/gordon | bash
 ```
 
 
