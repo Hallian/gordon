@@ -39,9 +39,8 @@ which simply links the `gordon.sh` from this repository to `/usr/bin/gordon`.
 You can use `gordon` to start a new chef repository, e.g.
 
 ```bash
-    $ mkdir sweetapp
-    $ cd sweetapp
-    $ gordon init
+    $ gordon init # default path for repo is /var/chef
+    $ gordon init myrepo # path to your new repository. must not exist
 ```
 
 ## Download
@@ -49,6 +48,7 @@ You can use `gordon` to start a new chef repository, e.g.
 To download something from Chef Superstore, run:
 
 ```bash
+    $ cd /var/chef
     $ gordon download nginx
 ```
 
@@ -57,6 +57,7 @@ To download something from Chef Superstore, run:
 To see what dependencies your repository has, run:
 
 ```bash
+    $ cd /var/chef
     $ gordon deps
 ```
 
@@ -64,6 +65,7 @@ You can also auto-download dependencies by running `download` with
 no parameters, e.g.
 
 ```bash
+    $ cd /var/chef
     $ gordon download
 ```
 

@@ -4,7 +4,7 @@ DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
 DEPS=""
 function handleRuby {
-    METADATAS=`find chef-repo/cookbooks -name metadata.rb`
+    METADATAS=`find cookbooks -name metadata.rb`
 
     for meta in $METADATAS
     do
@@ -16,7 +16,7 @@ function handleRuby {
 }
 
 function handleJson {
-    METADATAS=`find chef-repo/cookbooks -name metadata.json`
+    METADATAS=`find cookbooks -name metadata.json`
 
     for meta in $METADATAS
     do

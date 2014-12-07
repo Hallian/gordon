@@ -26,3 +26,19 @@ function colorEcho {
         echo -e "$2"
     fi
 }
+
+function info {
+    colorEcho "lightblue" "$@"
+}
+
+function error {
+    colorEcho "red" "$@"
+}
+
+function success {
+    colorEcho "green" "$@"
+}
+
+function warning {
+    colorEcho "yellow" "$@"
+}
