@@ -3,7 +3,7 @@
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
 function makeExecutable {
-    chmod +x $DIR/*.sh
+    chmod +x *.sh
 }
 
 function softInstall {
