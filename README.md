@@ -15,9 +15,7 @@ You'll need `knife` and `CoffeeScript` to use this program, e.g.
 Follow these instructions to install `gordon`.
 
 ```bash
-    $ git clone git@github.com:Hallian/gordon.git
-    $ cd gordon
-    $ sudo bash install.sh
+    $ curl https://raw.githubusercontent.com/Hallian/gordon/master/install.sh | bash
 ```
 
 

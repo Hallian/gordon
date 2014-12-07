@@ -1,26 +1,45 @@
 #!/usr/bin/env bash
 
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-source $DIR/color-echo.sh
 
 function makeExecutable {
     chmod +x $DIR/*.sh
 }
 
 function softInstall {
-    ln -s $DIR/gordon.sh /usr/bin/gordon
-    colorEcho "green" "soft installed gordon\n"
+    sudo ln -s `pwd`/gordon.sh /usr/bin/gordon
+    success "soft installed gordon\n"
     /usr/bin/gordon
 }
 
 function hardInstall {
-    mkdir -p /opt/gordon
-    cp -r $DIR/* /opt/gordon
-    ln -s /opt/gordon/gordon.sh /usr/bin/gordon
-    colorEcho "green" "installed gordon\n"
+    sudo mkdir -p /opt/gordon
+    sudo cp -r * /opt/gordon
+    sudo ln -s /opt/gordon/gordon.sh /usr/bin/gordon
+    success "installed gordon\n"
     /usr/bin/gordon
 }
 
+function checkSource {
+    if [ ! -f "$DIR/gordon.sh" ]; then
+        if [ -d "/tmp/gordon" ]; then
+            rm -rf /tmp/gordon
+        fi
+        cd /tmp
+        git clone https://github.com/Hallian/gordon.git
+        cd gordon
+    else
+        cd $DIR
+    fi
+    
+    source color-echo.sh
+}
+
+function clean {
+    rm -rf /tmp/gordon
+}
+
+checkSource
 makeExecutable
 
 if [ ! -z "$1" ]; then
@@ -29,8 +48,10 @@ if [ ! -z "$1" ]; then
     elif [ $1 == "--hard" ]; then
         hardInstall $2
     else
-        colorEcho "red" "unknown parameter \"$1\""
+        error "unknown parameter \"$1\""
     fi
 else
     hardInstall
 fi
+
+clean
