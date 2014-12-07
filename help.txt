@@ -1,0 +1,14 @@
+usage: gordon [command] [params]
+
+commands:
+    init                initialize chef-repo
+
+    download [package]  download package. if no package is defined, downloads
+                        all dependencies 
+
+    deps                get all package dependencies
+
+    help                print this help
+
+"I don't think it's a good advert for any restaurant, a fat chef, and secondly,
+who wants to eat a dessert when the chef's a fat pig." ~ Gordon Ramsay
