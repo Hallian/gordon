@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+source $DIR/color-echo.sh
+
 rm -rf /usr/bin/gordon /opt/gordon
-echo "removed gordon"
+colorEcho "green" "removed gordon"

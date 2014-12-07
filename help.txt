@@ -1,7 +1,7 @@
 usage: gordon [command] [params]
 
 commands:
-    init                initialize chef-repo
+    init [path]         initialize chef-repo. default path is "/var/chef"
 
     download [package]  download package. if no package is defined, downloads
                         all dependencies 

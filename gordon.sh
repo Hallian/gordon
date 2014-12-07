@@ -41,7 +41,7 @@ function router {
 }
 
 function cmdInit {
-    $DIR/init.sh
+    $DIR/init.sh $args
 }
 
 function cmdDownload {
