@@ -3,5 +3,5 @@
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 source $DIR/color-echo.sh
 
-rm -rf /usr/bin/gordon /opt/gordon
+sudo rm -rf /usr/bin/gordon /opt/gordon
 colorEcho "green" "removed gordon"
