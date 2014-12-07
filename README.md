@@ -18,21 +18,18 @@ back in the kitchen. What? No I won't pay royalties, piss off.
 
 # Installing
 
+```bash
+$ curl nikolas.ninja/gordon | bash
+```
+
 ## Prerequisites
 
 You'll need `knife` and `CoffeeScript` to use this program, e.g.
 
 ```bash
-$ apt-get install -y npm chef
-$ npm install -g coffee-script
-``` 
-
-Follow these instructions to install `gordon`.
-
-```bash
-$ curl nikolas.ninja/gordon | bash
+$ sudo apt-get install -y npm chef curl bash
+$ sudo npm install -g coffee-script
 ```
-
 
 ## Soft install
 
