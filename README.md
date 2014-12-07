@@ -12,6 +12,10 @@ url somehere in my emails..."_ Don't worry, Gordon has got you covered!
 
 <img src="https://i.imgflip.com/f0j7j.jpg" alt="">
 
+__DISCLAIMER__: This project has nothing to do with Gordon Ramsay and if you are
+Gordon Ramsay thinking to yourself _"what this fucker is doing with my name?"_, get
+back in the kitchen. What? No I won't pay royalties, piss off.
+
 # Installing
 
 ## Prerequisites
