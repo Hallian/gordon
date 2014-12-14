@@ -1,4 +1,4 @@
-usage: gordon [command] [params]
+$ usage: gordon [command] [params]
 
 commands:
     init [path]         initialize chef-repo. default path is "/var/chef"

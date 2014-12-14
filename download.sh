@@ -8,10 +8,14 @@ if [ -d "cookbooks" ]; then
 
     for pkg in $@
     do
-        COOKBOOK=`knife cookbook site download $pkg 2> /dev/null | grep 'Cookbook saved:' | sed -r 's/Cookbook saved: (.*)/\1/g'`
-        tar xzf $COOKBOOK
-        rm $COOKBOOK
-        success "downloaded $pkg"
+        if [ ! -d $pkg ]; then
+            COOKBOOK=`knife cookbook site download $pkg 2> /dev/null | grep 'Cookbook saved:' | sed -r 's/Cookbook saved: (.*)/\1/g'`
+            tar xzf $COOKBOOK
+            rm $COOKBOOK
+            success "downloaded $pkg"
+        else
+            info "already got $pkg. skipping"
+        fi
     done
 else
     error "cookbooks folder missing."
